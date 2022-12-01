@@ -1,0 +1,88 @@
+h1 {
+    text-align: center;
+    margin-top: 2%;
+    font-size: 40px;
+}
+
+ul {
+    list-style-type: none;
+    margin:auto;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 13px 17px;
+    text-decoration: none;
+    border-radius: 10%;
+}
+
+li a.curr {
+    background-color: #8AAAE5;
+    color: white;
+}
+
+.mypicture {
+    display: block;
+    width: 35%;
+    margin-left: 7%;
+    border-radius: 20%;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, .5);
+}
+
+.biocontact {
+    display: block;
+    width: 40%;
+    outline: auto;
+    padding: 0.5rem 1.5rem;
+    margin-left: 50%;
+    border-radius: 2%;
+}
+.biocontact.one {
+    margin-top: -22%;
+}
+
+.biocontact.two {
+    margin-top: 10px;
+}
+
+.projectspec {
+    display: block;
+    width: 24%;
+    outline: auto;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2%;
+}
+
+.projectspec.one {
+    margin-top: 10px;
+    margin-left: 10%;
+}
+
+.projectspec.two {
+    margin-top: -36.2%;
+    margin-left: 60%;
+}
+
+.projectspec.web {
+    margin-top: 3%;
+    margin-left: 40%;
+}
+
+.projectdescription {
+    display: block;
+    width: 33%;
+    outline: auto;
+    padding: 0.5rem 1.5rem;
+    margin-top: 3%;
+    margin-left: 35%;
+    border-radius: 2%;
+}
