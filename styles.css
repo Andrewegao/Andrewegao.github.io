@@ -8,6 +8,15 @@ h2 {
     color: #00539CFF;
 }
 
+.nooutline {
+    color:#00539CFF;
+    text-decoration: none;
+}
+
+a {
+    color: #00539CFF;
+}
+
 ul {
     list-style-type: none;
     background-color: white;
