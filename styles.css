@@ -4,10 +4,6 @@ h1 {
     font-size: 40px;
 }
 
-h2 {
-    color: #00539CFF;
-}
-
 .nooutline {
     color:#00539CFF;
     text-decoration: none;
@@ -44,11 +40,12 @@ li a.curr {
 }
 
 .mypicture {
-    display: block;
+    display: inline-block;
     width: 35%;
     margin-left: 7%;
     border-radius: 20%;
     box-shadow: 1px 4px 10px rgba(0, 0, 0, .5);
+    position: relative;
 }
 
 .biocontact {
@@ -68,8 +65,9 @@ li a.curr {
     margin-top: 10px;
 }
 
+
 .projectspec {
-    display: block;
+    display: inline-block;
     width: 24%;
     outline: auto;
     padding: 0.5rem 1.5rem;
@@ -77,7 +75,8 @@ li a.curr {
 }
 
 .projectspec.one {
-    margin-top: 10px;
+    position: relative;
+    margin-top: 5%;
     margin-left: 10%;
 }
 
@@ -96,4 +95,18 @@ li a.curr {
     width: 33%;
     margin-top: 3%;
     margin-left: 35%;
+}
+
+.googlecal {
+    display: inline-block;
+    outline: auto;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2%;
+    margin-top: 3%;
+    margin-left: 25%;
+}
+
+h2 {
+    color: #00539CFF;
+    text-align: left;
 }
