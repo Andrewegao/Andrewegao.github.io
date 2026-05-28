@@ -627,3 +627,4 @@ video.unrulymedia.com, 586616193, RESELLER
 smartadserver.com, 4111, RESELLER
 openx.com, 566165581, DIRECT, 6a698e2ec38604c6
 openx.com, 566165581, RESELLER, 6a698e2ec38604c6
+adingo.jp, 34700, RESELLER
