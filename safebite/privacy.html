@@ -11,15 +11,17 @@
 <header>
   <a class="brand" href="./">SafeBite</a>
   <h1>Privacy Policy</h1>
-  <p class="meta">Effective November 8, 2026 · Qupid, LLC (“we”, “us”)</p>
+  <p class="meta">Effective November 8, 2026 · Last updated November 12, 2026 · Qupid, LLC (“we”, “us”)</p>
 </header>
+
+<p>This policy covers SafeBite for iPhone and SafeBite for Android. Where the two work differently, it says which is which.</p>
 
 <div class="short">
   <h2>The short version</h2>
   <ul>
     <li>SafeBite has no accounts. We never receive your name, your email, or the names and ages of the people in your household.</li>
     <li>Your household, your Kitchen list and your history stay on your phone.</li>
-    <li>The following may leave your phone: a photo if you choose Google reading (you can read it on-device instead), the alert groups your phone joins (held by Google’s messaging service against an install code, never a name), an anonymous count when an alert arrives or is opened, and signed Apple purchase information plus scan counts to enforce cloud allowances.</li>
+    <li>The following may leave your phone: a photo if you choose Google reading (you can read it on-device instead), the alert groups your phone joins (held by Google’s messaging service against an install code, never a name), an anonymous count when an alert arrives or is opened, and, when you use cloud scans, scan counts plus purchase information to enforce allowances (on iPhone, signed Apple purchase information; on Android, a hashed device identifier and, for SafeBite+, the Google Play purchase token).</li>
     <li>No advertising networks, no tracking, no analytics or crash-reporting software, no location access. We do not sell personal information or share it for advertising.</li>
   </ul>
 </div>
@@ -34,15 +36,16 @@
   <li><strong>Settings</strong> such as your alert switches, and a copy of the public recall list and its pictures so the app opens quickly.</li>
   <li>A small file the app shares with its own widget and notification components on the same phone, holding the household first names, allergens, pet names and watched items, so an alert can say why it is yours. It never leaves the phone.</li>
 </ul>
-<p>If you back up your phone to iCloud or a computer, this app data is included in <em>your</em> backup, under your Apple Account. We have no access to it.</p>
+<p>If you back up your iPhone to iCloud or a computer, this app data is included in <em>your</em> backup, under your Apple Account. We have no access to it. On Android, if Backup is on in your phone’s settings, Android’s backup service copies your household, watchlist, followed recalls and app settings into <em>your</em> Google Account backup, so they come back when you restore or switch phones. Cached recall lists, photos and alert registration are left out. We have no access to these backups.</p>
 
 <h2>2. What leaves your phone, and why</h2>
 
 <h3>Photos you check</h3>
 <p>When you check a product, the app asks for permission before sending a photo to Google Gemini through SafeBite’s protected Cloudflare server to read its label. You can choose to read it on your phone only instead; this may recognize fewer foods. You can withdraw permission in the app’s Privacy &amp; terms screen. If you agree, the photo is resized, stripped of location and camera metadata, and sent through SafeBite’s protected Cloudflare server to Google. SafeBite processes the photo in memory and does not store it. Recognized product details may be retained for up to 24 hours so an interrupted request can be recovered without another AI call. If Google’s service cannot be reached, the photo is read on your phone instead. Google processes the photo under its own terms and privacy policy, linked below; we do not control how long Google retains it.</p>
+<p>On Android, this choice appears once cloud reading is available for your phone; until then every photo is read on your phone and none is sent to SafeBite or to Google. On-device reading on Android uses Google’s ML Kit, which runs on the phone through Google Play services; Google Play services downloads its reading models to the phone. On iPhone, on-device reading uses Apple’s built-in tools.</p>
 
 <h3>Alerts</h3>
-<p>To deliver alerts, your phone registers with Apple Push Notification service and Google Firebase Cloud Messaging. That creates a device token and a Firebase installation ID. Your phone then joins alert groups that are named after:</p>
+<p>To deliver alerts, an iPhone registers with Apple Push Notification service and Google Firebase Cloud Messaging; an Android phone registers with Google Firebase Cloud Messaging. That creates a device token and a Firebase installation ID. Your phone then joins alert groups that are named after:</p>
 <ul>
   <li>your state, and any extra states you add;</li>
   <li>the allergens in your household;</li>
@@ -51,13 +54,13 @@
   <li>recalls you follow (as a short code).</li>
 </ul>
 <p>Google’s messaging service holds those group memberships against the installation ID. These preferences, including allergen and state selections, are linked to this app installation. They are not attached to a name, an email address or a SafeBite account, because we never have one. Names, ages, barcodes and photos are never part of a group name. We send one message to each group a recall concerns; we never see which phones are in a group and keep no list of devices.</p>
-<p>If you choose “Not now” when SafeBite offers alerts, the app still registers for <em>quiet</em> delivery so that an alert about your own Kitchen can appear silently in Notification Center, where iOS asks whether you want to keep receiving them. You can turn every group off in Settings → Alerts, or turn notifications off for SafeBite in iOS Settings.</p>
+<p>On iPhone, if you choose “Not now” when SafeBite offers alerts, the app still registers for <em>quiet</em> delivery so that an alert about your own Kitchen can appear silently in Notification Center, where iOS asks whether you want to keep receiving them. On Android, the phone joins alert groups only while SafeBite is allowed to show notifications; on Android 13 and later that starts when you allow them, and “Not now” asks nothing. You can turn every group off in Settings → Alerts, or turn notifications off for SafeBite in your phone’s settings (iOS Settings or Android Settings).</p>
 
 <h3>Anonymous alert counts</h3>
 <p>When an alert arrives, and when you open one, the app sends our server three values: whether it arrived or was opened, a short code for the recall, and a reason category (“kitchen”, “allergy”, “pets”, “near” or “none”). No device identifier, cookie, name or household detail is included, and the values are stored without your IP address. We use the totals to see whether alerts are working. They are kept for about three months.</p>
 
 <h3>Proving the app is genuine</h3>
-<p>Firebase App Check uses Apple’s App Attest or DeviceCheck to confirm that requests come from a real copy of SafeBite on a real device. This produces a device-level attestation handled by Apple and Google. It checks the app and device without asking for your name or Apple Account.</p>
+<p>Firebase App Check confirms that requests come from a real copy of SafeBite on a real device: on iPhone it uses Apple’s App Attest or DeviceCheck; on Android it uses Google Play Integrity. This produces a device-level attestation handled by Apple and Google (on iPhone) or by Google (on Android). It checks the app and device without asking for your name, Apple Account or Google Account.</p>
 
 <h3>Downloading recalls and pictures</h3>
 <p>The app downloads the public recall list and its pictures from our server, which runs on Cloudflare. A small number of pictures load directly from the websites that publish them, including fda.gov, openfoodfacts.org and retailer image servers. As with any website, those servers and Cloudflare see your IP address when your phone connects. Our server code does not store or log it. Cloudflare may process connection information under its own privacy policy, linked below.</p>
@@ -66,39 +69,40 @@
 <p>These privacy, terms and support pages are hosted by GitHub Pages. When you visit them, GitHub logs your IP address for security purposes under its own <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">Privacy Statement</a>. The app does not load these pages unless you choose to open a policy or support link.</p>
 
 <h3>Purchases</h3>
-<p>SafeBite+ subscriptions and tips are billed by Apple. We never receive your payment details or Apple Account email or password. For cloud scans, our server receives signed app and subscription purchase information and checks subscription status with Apple.</p>
-<p>The server verifies Apple-signed app and subscription information and Firebase App Check before authorizing a cloud scan. A hashed app purchase identifier links scan counts across devices using the same Apple Account; SafeBite does not receive your Apple Account email or password. Monthly counts, request identifiers and abuse-prevention records are retained for the current and two preceding calendar months, then removed automatically. Clearing local data, reinstalling or changing the phone’s clock does not reset the server allowance.</p>
+<p>SafeBite+ subscriptions and tips are billed by Apple through the App Store on iPhone, and by Google through Google Play on Android. We never receive your payment details or your Apple Account or Google Account email or password. For cloud scans on iPhone, our server receives signed app and subscription purchase information and checks subscription status with Apple. For cloud scans on Android, our server receives a hashed device identifier (made on the phone from Android’s app-specific ID; the ID itself never leaves the phone) and, if you subscribe, your Google Play purchase token, and checks subscription status with Google Play. When you subscribe on Android, a hash tied to that phone is stored with the purchase at Google Play so one subscription cannot be spread across many phones.</p>
+<p>The server verifies Firebase App Check and, on iPhone, Apple-signed app and subscription information, or, on Android, the subscription with Google Play, before authorizing a cloud scan. On iPhone, a hashed app purchase identifier links scan counts across devices using the same Apple Account; on Android, free scans are counted per phone and SafeBite+ scans per subscription; SafeBite does not receive your Apple Account email or password. Monthly scan counts and request identifiers are retained for the current and two preceding calendar months, then removed automatically. Android subscription device-sharing records are removed after the current calendar month. Hashed links between successive Google Play subscription purchases are kept while this service operates so changing plans does not reset the shared allowance; these links contain no photos, product details or account names. Clearing local data, reinstalling or changing the phone’s clock does not reset the server allowance.</p>
 
 <h2>3. What we never do</h2>
 <ul>
   <li>No accounts, sign-in, or email collection.</li>
   <li>No advertising software and no tracking across apps or websites.</li>
   <li>No analytics or crash-reporting software.</li>
-  <li>No access to your location, contacts, or photo library. Your state is chosen by hand, and photos you pick are handed to the app one at a time by iOS.</li>
+  <li>No access to your location, contacts, or photo library. Your state is chosen by hand, and photos you pick are handed to the app one at a time by iOS or by Android’s photo picker. The camera is used only while you check a product, after you allow it.</li>
   <li>We do not sell personal information, and we do not share it for advertising.</li>
 </ul>
 
 <h2>4. Companies that process data for the app</h2>
 <div class="scroll"><table>
   <tr><th>Company</th><th>What it handles</th><th>Its policy</th></tr>
-  <tr><td>Google (Gemini, Cloud Messaging, App Check, Installations)</td><td>Photos you check; push registration and alert groups; app attestation</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a> · <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></td></tr>
-  <tr><td>Apple (Push Notification service, App Attest, App Store)</td><td>Delivering notifications; attestation; purchases</td><td><a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a></td></tr>
+  <tr><td>Google (Gemini, Cloud Messaging, App Check, Installations)</td><td>Photos you choose to have read (both apps); push registration and alert groups (both apps); app attestation</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a> · <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></td></tr>
+  <tr><td>Google (Google Play, Play Integrity, Google Play services)</td><td>On Android: purchases and subscription status; app attestation; delivering the on-device reading models (ML Kit); backups you turn on</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
+  <tr><td>Apple (Push Notification service, App Attest, App Store)</td><td>On iPhone: delivering notifications; attestation; purchases</td><td><a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a></td></tr>
   <tr><td>Cloudflare</td><td>Serving recalls and pictures; forwarding scan photos to Google; enforcing shared scan allowances and spending limits; holding temporary recognition results and anonymous alert counts</td><td><a href="https://www.cloudflare.com/privacypolicy/">cloudflare.com/privacypolicy</a></td></tr>
   <tr><td>GitHub Pages</td><td>Hosting these policy and support pages</td><td><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a></td></tr>
 </table></div>
 
 <h2>5. Deleting your information</h2>
-<p>Settings → Privacy &amp; terms → “Delete everything on this phone” removes your household, your Kitchen, followed and dealt-with recalls, the check history, your alert settings, pending reminders, and the file shared with the widget and notification components, and it leaves every alert group. Deleting the app removes its ordinary app data. It does not reset the server’s cloud scan allowance or remove the short-lived anti-abuse records described above.</p>
-<p>What that cannot reach: copies inside a device backup you made earlier (manage these in iOS Settings → your name → iCloud, or on your computer), and alerts already showing in Notification Center until you clear them. Server scan records associated with your hashed app purchase identifier follow the retention period above. Contact us through the support page about access or deletion of those records.</p>
+<p>Settings → Privacy &amp; terms → “Delete everything on this phone” removes your household, your Kitchen, followed and dealt-with recalls, the check history, your alert settings, pending reminders, and the file shared with the widget and notification components, and it leaves every alert group. Deleting the app removes its ordinary app data. It does not reset the server’s cloud scan allowance or remove the server records described above.</p>
+<p>What that cannot reach: copies inside a device backup you made earlier (on iPhone, manage these in iOS Settings → your name → iCloud, or on your computer; on Android, in Settings → Google → Backup), and, on iPhone, alerts already showing in Notification Center until you clear them. Server scan records associated with your hashed purchase or device identifier follow the retention period above. Contact us through the support page about access or deletion of those records.</p>
 
 <h2>6. Children</h2>
 <p>SafeBite is meant for the adults who run a household. It is not directed at children under 13, and we do not knowingly collect personal information from children. A child’s profile is entered by an adult, is stored only on that adult’s phone, and is never sent to us.</p>
 
 <h2>7. Your rights</h2>
-<p>Depending on where you live, you may have rights to access, correct or delete personal information, or to object to certain uses. You can edit or delete local household data in the app, and manage push registration with Apple and Google. For server scan records associated with your app purchase, contact us through the support page; we will verify your request and explain any limited retention needed to prevent abuse. If you believe we hold information about you, contact us and we will help.</p>
+<p>Depending on where you live, you may have rights to access, correct or delete personal information, or to object to certain uses. You can edit or delete local household data in the app, and manage push registration with Apple and Google. For server scan records associated with your purchase or device identifier, contact us through the support page; we will verify your request and explain any limited retention needed to prevent abuse. If you believe we hold information about you, contact us and we will help.</p>
 
 <h2>8. Security</h2>
-<p>All connections from the app use HTTPS. Information on your phone is protected by iOS and your device passcode.</p>
+<p>All connections from the app use HTTPS. Information on your phone is protected by iOS or Android and your device passcode or screen lock.</p>
 
 <h2>9. Changes</h2>
 <p>If this policy changes in a way that matters, we will update the date above and say so in the app’s release notes or inside the app before the change takes effect.</p>
